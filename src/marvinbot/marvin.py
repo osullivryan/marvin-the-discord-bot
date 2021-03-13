@@ -90,7 +90,6 @@ class Marvin(discord.Client):
 
     async def _add_turns(self, message: discord.Message, new_turns: Turns) -> None:
         await self._ping_user_about_their_turn(message.channel, new_turns.current)
-        new_turns.next_turn()
         print('new turn is happening')
 
     async def _take_turn(self, message: discord.Message) -> None:
